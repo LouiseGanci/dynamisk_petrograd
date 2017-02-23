@@ -170,6 +170,10 @@ h1 {
     text-align: center;
 }
 
+.udsolgt {
+    text-decoration: line-through;
+}
+
 .knap_i_midten {
     text-align: center;
 }
