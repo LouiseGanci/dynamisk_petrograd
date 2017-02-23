@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="da">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Restaurant Petrograd</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link href="style.css" rel="stylesheet">
+
+</head>
+
+<body>
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">PEtrograd</a>
+            </div>
+            <div id="navbar" class="collapse navbar-collapse">
+                <ul class="nav navbar-nav">
+                    <li><a href="#forretter">Forretter</a></li>
+                    <li><a href="#hovedretter">Hovedretter</a></li>
+                    <li><a href="#desserter">Desserter</a></li>
+                    <li><a href="#sideorders">Sideorders</a></li>
+                    <li><a href="#drikkevarer">Drikkevarer</a></li>
+                    <li><a href="#findos">Find os</a></li>
+
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container-fluid">
+        <div class="splash_img">
+            <br>
+            <br>
+            <br>
+            <h1>PEtrograd</h1>
+        </div>
+
+        <div class="background">
+            <div class="container-fluid">
+
+                <div id=forretter>
+                    <!----- Page header starter her ------>
+                    <div class="page-header">
+                        <div class="col-lg-12">
+                            <h2>FORRETTER</h2>
+                        </div>
+                    </div>
+                    <!----- Page header slutter her ------>
+
+                    <div class="row">
+
+                        <!----- Forret 1 ------->
+                        <div class="knap_i_midten col-md-offset-2 col-md-2">
+                            <img src="small/caviarbruschetta-sm.jpg" alt="Billede af caviar bruschetta">
+                            <button class="btn btn-md outline" data-toggle="modal" data-target="#myModal">Se mere<span class="glyphicon glyphicon-chevron-right">
+</span></button>
+                        </div>
+                        <!----- Forret 1 modalboks ------->
+                        <div id="myModal" class="modal fade" role="dialog">
+                            <div class="modal-dialog">
+
+                                <!-- Modal content-->
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                        <h4 class="modal-title"><span class="data_navn">DATA_NAVN</span></h4>
+                                    </div>
+
+                                    <div class="modalbillede"></div>
+                                    <p><span class="data_langBeskrivelse">DATA_LANGBESKRIVELSE</span>
+                                    </p>
+                                    <h5><span class="data_pris">DATA_PRIS</span></h5>
+
+                                    <div class="modal-footer">
+                                        <p><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star-empty"></span></p>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <!----- Forret 2 ------->
+                        <div class="knap_i_midten col-md-2">
+                            <img src="small/ringbroed-druer-sm.jpg" alt="billede af russisk ringbrød med vindruer">
+                            <button class="btn btn-md outline" data-toggle="modal" data-target="#myModal1">Se mere<span class="glyphicon glyphicon-chevron-right">
+</span></button>
+                        </div>
+                        <!----- Forret 2 modalboks ------->
+                        <div id="myModal1" class="modal fade" role="dialog">
+                            <div class="modal-dialog">
+
+                                <!-- Modal content-->
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                        <h4 class="modal-title">Russisk ringbrød med vindruer</h4>
+                                    </div>
+                                    <div class="modal-body">
+                                        <p>Some text in the modal.</p>
+                                    </div>
+                                    <div class="modal-footer">
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <!----- Forret 3 ------->
+                        <div class="knap_i_midten col-md-2">
+                            <img src="small/kaalsuppe-sm.jpg" alt="billede af østsibirisk kålsuppe">
+                            <button class="btn btn-md outline" data-toggle="modal" data-target="#myModal2">Se mere<span class="glyphicon glyphicon-chevron-right">
+</span></button>
+                        </div>
+                        <!----- Forret 3 modalboks ------->
+                        <div id="myModal2" class="modal fade" role="dialog">
+                            <div class="modal-dialog">
+
+                                <!-- Modal content-->
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                        <h4 class="modal-title">Østsibirisk kålsuppe</h4>
+                                    </div>
+                                    <div class="modal-body">
+                                        <p>Some text in the modal.</p>
+                                    </div>
+                                    <div class="modal-footer">
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <!----- Forret 4 ------->
+                        <div class="knap_i_midten col-md-2">
+                            <img src="small/baltiskbondesuppe-sm.jpg" alt="billede af baltisk bondesuppe">
+                            <button class="btn btn-md outline" data-toggle="modal" data-target="#myModal3">Se mere<span class="glyphicon glyphicon-chevron-right">
+</span></button>
+                        </div>
+                        <!----- Forret 4 modalboks ------->
+                        <div id="myModal3" class="modal fade" role="dialog">
+                            <div class="modal-dialog">
+
+                                <!-- Modal content-->
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                        <h4 class="modal-title">Baltisk bondesuppe</h4>
+                                    </div>
+                                    <div class="modal-body">
+                                        <p>Some text in the modal.</p>
+                                    </div>
+                                    <div class="modal-footer">
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="line"></div>
+
+                    <div id=hovedretter>
+                        <h2>HOVEDRETTER</h2>
+                        <div class="row">
+
+                            <div class="knap_i_midten col-md-offset-2 col-md-2">
+                                <img src="small/mos-rogn-sm.jpg" alt="Billede af Kæmperogn med kartoffelmos">
+                                <button class="btn btn-md outline" data-toggle="modal" data-target="#myModal4">Se mere<span class="glyphicon glyphicon-chevron-right">
+</span></button>
+                            </div>
+
+                            <div id="myModal4" class="modal fade" role="dialog">
+                                <div class="modal-dialog">
+
+                                    <!-- Modal content-->
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                            <h4 class="modal-title">Kæmperogn med kartoffelmos</h4>
+                                        </div>
+                                        <div class="modal-body">
+                                            <p>Some text in the modal.</p>
+                                        </div>
+                                        <div class="modal-footer">
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                            <div class="knap_i_midten col-md-2">
+                                <img src="small/bulgarskbondesuppe-sm.jpg" alt="billede af Bulgarsk bondesuppe">
+                                <button class="btn btn-md outline" data-toggle="modal" data-target="#myModal5">Se mere<span class="glyphicon glyphicon-chevron-right">
+</span></button>
+                            </div>
+
+                            <div id="myModal5" class="modal fade" role="dialog">
+                                <div class="modal-dialog">
+
+                                    <!-- Modal content-->
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                            <h4 class="modal-title">Bulgarsk bondesuppe</h4>
+                                        </div>
+                                        <div class="modal-body">
+                                            <p>Some text in the modal.</p>
+                                        </div>
+                                        <div class="modal-footer">
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                            <div class="knap_i_midten col-md-2">
+                                <img src="small/russisktapas-sm.jpg" alt="billede af russisk tapas">
+                                <button class="btn btn-md outline" data-toggle="modal" data-target="#myModal6">Se mere<span class="glyphicon glyphicon-chevron-right">
+</span></button>
+                            </div>
+
+                            <div id="myModal6" class="modal fade" role="dialog">
+                                <div class="modal-dialog">
+
+                                    <!-- Modal content-->
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                            <h4 class="modal-title">Russisk tapas</h4>
+                                        </div>
+                                        <div class="modal-body">
+                                            <p>Some text in the modal.</p>
+                                        </div>
+                                        <div class="modal-footer">
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                            <div class="knap_i_midten col-md-2">
+                                <img src="small/moldaviskfiskesuppe-sm.jpg" alt="billede af baltisk bondesuppe">
+                                <button class="btn btn-md outline" data-toggle="modal" data-target="#myModal7">Se mere<span class="glyphicon glyphicon-chevron-right">
+</span></button>
+                            </div>
+
+                            <div id="myModal7" class="modal fade" role="dialog">
+                                <div class="modal-dialog">
+
+                                    <!-- Modal content-->
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                            <h4 class="modal-title">Moldoviansk fiskesuppe</h4>
+                                        </div>
+                                        <div class="modal-body">
+                                            <p>Some text in the modal.</p>
+                                        </div>
+                                        <div class="modal-footer">
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="desserter"></div>
+                <div id="findos"></div>
+
+            </div>
+        </div>
+    </div>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+</body>
+
+</html>
