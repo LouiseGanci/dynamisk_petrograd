@@ -40,6 +40,15 @@ function visProdukt(produkt) {
         udsolgttekst.parentNode.removeChild(udsolgttekst);
 
     } else {
+        var pris = klon.querySelector(".pris");
+        pris.parentNode.removeChild(pris);
+    }
+
+    if (produkt.udsolgt == true || produkt.rabatsats == 0) {
+        // der er ikke rabat, rabat-prisen skal fjernes
+        var rabatpris = klon.querySelector(".rabatpris");
+        rabatpris.parentNode.removeChild(rabatpris);
+    } else {
         klon.querySelector(".pris").classList.add("udsolgt");
     }
 
