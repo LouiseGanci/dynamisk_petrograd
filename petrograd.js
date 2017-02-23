@@ -103,7 +103,80 @@ function visModalProdukt(produkt) {
     klon.querySelector(".data_billede").src = "/small/" + produkt.billede + "-sm.jpg";
     klon.querySelector(".data_oprindelsesregion").innerHTML = produkt.oprindelsesregion;
 
-
+    // hvor mange stjerner, der skal vises
+    if (produkt.stjerner == 0) {
+        // der er 0 stjerner, og derfor skal alle andre star-classes end star0 fjernes
+        var star1 = klon.querySelector(".star1");
+        star1.parentNode.removeChild(star1);
+        var star2 = klon.querySelector(".star2");
+        star2.parentNode.removeChild(star2);
+        var star3 = klon.querySelector(".star3");
+        star3.parentNode.removeChild(star3);
+        var star4 = klon.querySelector(".star4");
+        star4.parentNode.removeChild(star4);
+        var star5 = klon.querySelector(".star5");
+        star5.parentNode.removeChild(star5);
+    } else if (produkt.stjerner == 1) {
+        // der er 1 stjerne, og derfor skal alle andre star-classes end star1 fjernes
+        var star0 = klon.querySelector(".star0");
+        star0.parentNode.removeChild(star0);
+        var star2 = klon.querySelector(".star2");
+        star2.parentNode.removeChild(star2);
+        var star3 = klon.querySelector(".star3");
+        star3.parentNode.removeChild(star3);
+        var star4 = klon.querySelector(".star4");
+        star4.parentNode.removeChild(star4);
+        var star5 = klon.querySelector(".star5");
+        star5.parentNode.removeChild(star5);
+    } else if (produkt.stjerner == 2) {
+        // der er 2 stjerner, og derfor skal alle andre star-classes end star2 fjernes
+        var star1 = klon.querySelector(".star1");
+        star1.parentNode.removeChild(star1);
+        var star0 = klon.querySelector(".star0");
+        star0.parentNode.removeChild(star0);
+        var star3 = klon.querySelector(".star3");
+        star3.parentNode.removeChild(star3);
+        var star4 = klon.querySelector(".star4");
+        star4.parentNode.removeChild(star4);
+        var star5 = klon.querySelector(".star5");
+        star5.parentNode.removeChild(star5);
+    } else if (produkt.stjerner == 3) {
+        // der er 3 stjerner, og derfor skal alle andre star-classes end star3 fjernes
+        var star1 = klon.querySelector(".star1");
+        star1.parentNode.removeChild(star1);
+        var star2 = klon.querySelector(".star2");
+        star2.parentNode.removeChild(star2);
+        var star0 = klon.querySelector(".star0");
+        star0.parentNode.removeChild(star0);
+        var star4 = klon.querySelector(".star4");
+        star4.parentNode.removeChild(star4);
+        var star5 = klon.querySelector(".star5");
+        star5.parentNode.removeChild(star5);
+    } else if (produkt.stjerner == 4) {
+        // der er 4 stjerner, og derfor skal alle andre star-classes end star4 fjernes
+        var star1 = klon.querySelector(".star1");
+        star1.parentNode.removeChild(star1);
+        var star2 = klon.querySelector(".star2");
+        star2.parentNode.removeChild(star2);
+        var star3 = klon.querySelector(".star3");
+        star3.parentNode.removeChild(star3);
+        var star0 = klon.querySelector(".star0");
+        star0.parentNode.removeChild(star0);
+        var star5 = klon.querySelector(".star5");
+        star5.parentNode.removeChild(star5);
+    } else if (produkt.stjerner == 5) {
+        // der er 5 stjerner, og derfor skal alle andre star-classes end star5 fjernes
+        var star1 = klon.querySelector(".star1");
+        star1.parentNode.removeChild(star1);
+        var star2 = klon.querySelector(".star2");
+        star2.parentNode.removeChild(star2);
+        var star3 = klon.querySelector(".star3");
+        star3.parentNode.removeChild(star3);
+        var star0 = klon.querySelector(".star0");
+        star0.parentNode.removeChild(star0);
+        var star4 = klon.querySelector(".star4");
+        star4.parentNode.removeChild(star4);
+    }
 
     // sletter det, der stod i modal-content
     document.querySelector(".modal-content").innerHTML = "";

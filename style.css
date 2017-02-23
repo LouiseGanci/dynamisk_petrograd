@@ -13,6 +13,8 @@ body {
 }
 
 p {
+    font-family: 'Hind';
+    font-weight: 300;
     color: #000000;
 }
 
@@ -25,9 +27,19 @@ h2 {
     margin-bottom: 30px;
 }
 
-h4 {
-    text-align: center;
+h3 {
+    font-family: 'Hind';
+    font-weight: 700;
     font-size: 20px;
+    color: #000000;
+    text-align: center;
+}
+
+h4 {
+    font-family: 'Hind';
+    font-weight: 500;
+    text-align: center;
+    font-size: 16px;
 }
 
 h5 {
@@ -154,15 +166,6 @@ img:hover {
     filter: brightness(100%);
 }
 
-.modalbillede {
-    background-image: url(small/caviarbruschetta-sm.jpg);
-    background-repeat: no-repeat;
-    background-size: contain;
-    width: 22.5vw;
-    height: 15vw;
-    margin: 2vw auto;
-}
-
 #forretter #myModal p {
     width: 22.5vw;
     margin: 0 auto;
@@ -181,6 +184,7 @@ img:hover {
 
 button {
     margin: 30px auto;
+    font-family: 'Hind';
 }
 
 .btn.outline {
