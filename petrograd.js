@@ -9,19 +9,19 @@ function sidenVises() {
 
 function visProduktListe(listen) {
     console.table(listen);
+    produktIndex = 0;
     listen.forEach(visProdukt);
 }
 
-var firstProduct = true
+var produktIndex = 0
 
 function visProdukt(produkt) {
     console.log(produkt);
 
     //klon produkt_template
     var klon = document.querySelector("#produkt_template").content.cloneNode(true);
-    if (firstProduct == true) {
-        klon.querySelector(".knap_i_midten").classList.add(".col-md-offset-2");
-        firstProduct = false;
+    if (produktIndex % 4 == 0) {
+        klon.querySelector(".knap_i_midten").classList.add("col-md-offset-2");
     }
 
     //indsæt data i klon
@@ -52,6 +52,62 @@ function visProdukt(produkt) {
         klon.querySelector(".pris").classList.add("udsolgt");
     }
 
+    // tilføj produkt-id til modalknap
+    klon.querySelector(".modalknap").dataset.produkt = produkt.id;
+
+    // registrer klik på modalknap
+    klon.querySelector(".modalknap").addEventListener("click", modalKnapKlik);
+
+    if (produkt.kategori == "forretter") {
+        document.querySelector(".forretterliste").appendChild(klon);
+    } else if (produkt.kategori == "hovedretter") {
+        document.querySelector(".hovedretterliste").appendChild(klon);
+    } else if (produkt.kategori == "desserter") {
+        document.querySelector(".desserterliste").appendChild(klon);
+    } else if (produkt.kategori == "drikkevarer") {
+        document.querySelector(".drikkevarerliste").appendChild(klon);
+    } else if (produkt.kategori == "sideorders") {
+        document.querySelector(".sideordersliste").appendChild(klon);
+
+    }
+
     //append klon til .produkt_liste
-    document.querySelector(".produktliste").appendChild(klon);
+
+
+    // tæller produkter
+    produktIndex++;
+}
+
+function modalKnapKlik(event) {
+    console.log("Knappen er klikket", event);
+
+    // find produkt id, hvis knap der er blevet trykket på
+    var produktId = event.target.dataset.produkt;
+    console.log("Klik på produkt", produktId);
+
+    $.getJSON("http://petlatkea.dk/2017/dui/api/product?callback=?", {
+        id: produktId
+    }, visModalProdukt);
+}
+
+function visModalProdukt(produkt) {
+    console.log("vis modal for ", produkt);
+
+    // find modal_template, klon den
+    var klon = document.querySelector("#modal_template").content.cloneNode(true);
+
+    // put data i klonen
+    klon.querySelector(".data_navn").innerHTML = produkt.navn;
+    klon.querySelector(".data_langbeskrivelse").innerHTML = produkt.langbeskrivelse;
+    klon.querySelector(".data_pris").innerHTML = produkt.pris;
+    klon.querySelector(".data_billede").src = "/small/" + produkt.billede + "-sm.jpg";
+    klon.querySelector(".data_oprindelsesregion").innerHTML = produkt.oprindelsesregion;
+
+
+
+    // sletter det, der stod i modal-content
+    document.querySelector(".modal-content").innerHTML = "";
+
+    // append klonen til modal-content
+    document.querySelector(".modal-content").appendChild(klon);
 }

@@ -57,10 +57,10 @@
                     </div>
                     <!----- Page header slutter her ------>
 
-                    <div class="row produktliste">
-                        <!-- her skal produkter lægges ind -->
+                    <div class="row forretterliste">
+                        <!-- her skal forretter lægges ind -->
 
-                        <!----- Forret 1 ------->
+                        <!----- Forretter ------->
                         <template id="produkt_template">
                             <div class="knap_i_midten  col-md-2">
                                 <img class="data_billede" src="small/caviarbruschetta-sm.jpg" alt="Billede af caviar bruschetta">
@@ -71,21 +71,104 @@
                                 <!--- skal kun vises ved rabat --->
                                 <h4 class="udsolgttekst">Denne ret er desværre udsolgt</h4>
                                 <!---- Skal kun vises ved udsolgt ---->
-                                <button class="btn btn-md outline" data-toggle="modal" data-target="#myModal">Se mere<span class="glyphicon glyphicon-chevron-right">
+                                <button class="btn btn-md outline modalknap" data-toggle="modal" data-target="#myModal">Se mere<span class="glyphicon glyphicon-chevron-right">
 </span></button>
                             </div>
                         </template>
 
+                        <!----- Forret 1 modalboks ------->
+                        <div id="myModal" class="modal fade" role="dialog">
+                            <div class="modal-dialog">
 
+                                <!-- Modal content-->
+                                <div class="modal-content">
+                                    <!--- det er her min modal-template skal være --->
+                                </div>
+
+                            </div>
+                        </div>
+                        <!----- Forret 1 modalboks slut ------->
+                        <template id="modal_template">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                <h4 class="modal-title"><span class="data_navn">DATA_NAVN</span></h4>
+                            </div>
+
+                            <img class="data_billede" alt="billede af russisk ret">
+                            <h4>Oprindelsesregion: <span class="data_oprindelsesregion">DATA_OPRINDELSESREGION</span></h4>
+                            <p><span class="data_langbeskrivelse">DATA_LANGBESKRIVELSE</span>
+                            </p>
+                            <h4>Pris: <span class="data_pris">DATA_PRIS</span></h4>
+                            <h4 class="rabatpris">Pris: <span class="data_rabatpris">DATA_RABATPRIS</span>,-</h4>
+                            <!--- skal kun vises ved rabat --->
+                            <h4 class="udsolgttekst">Denne ret er desværre udsolgt</h4>
+                            <!---- Skal kun vises ved udsolgt ---->
+                            <h4 class="data_vegetarer">Denne ret er egnet for vegetarer</h4>
+                            <h4 class="allergener">Allergener: <span class="data_allergener"></span></h4>
+                            <h4 class="alkohol">Bemærk: Indeholder <span class="data_alkohol"></span>% alkohol</h4>
+
+
+                            <div class="modal-footer">
+                                <p><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star-empty"></span></p>
+                            </div>
+                        </template>
                     </div>
 
                     <div class="line"></div>
 
-                    <div id=hovedretter></div>
-                    <div id="desserter"></div>
-                    <div id="findos"></div>
+
 
                 </div>
+
+                <div id=hovedretter>
+                    <!----- Page header starter her ------>
+                    <div class="page-header">
+                        <div class="col-lg-12">
+                            <h2>HOVEDRETTER</h2>
+                        </div>
+                    </div>
+                    <div class="row hovedretterliste">
+                        <!-- her skal hovedretter lægges ind -->
+                    </div>
+                </div>
+
+                <div id="desserter">
+                    <!----- Page header starter her ------>
+                    <div class="page-header">
+                        <div class="col-lg-12">
+                            <h2>DESSERTER</h2>
+                        </div>
+                    </div>
+                    <div class="row desserterliste">
+                        <!-- her skal hovedretter lægges ind -->
+                    </div>
+                </div>
+
+                <div id="sideorders">
+                    <!----- Page header starter her ------>
+                    <div class="page-header">
+                        <div class="col-lg-12">
+                            <h2>SIDEORDERS</h2>
+                        </div>
+                    </div>
+                    <div class="row sideordersliste">
+                        <!-- her skal hovedretter lægges ind -->
+                    </div>
+                </div>
+
+                <div id="drikkevarer">
+                    <!----- Page header starter her ------>
+                    <div class="page-header">
+                        <div class="col-lg-12">
+                            <h2>DRIKKEVARER</h2>
+                        </div>
+                    </div>
+                    <div class="row drikkevarerliste">
+                        <!-- her skal hovedretter lægges ind -->
+                    </div>
+                </div>
+
+                <div id="findos"></div>
             </div>
         </div>
     </div>

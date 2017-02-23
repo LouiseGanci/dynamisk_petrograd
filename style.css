@@ -27,7 +27,7 @@ h2 {
 
 h4 {
     text-align: center;
-    font-size: 30px;
+    font-size: 20px;
 }
 
 h5 {
@@ -143,14 +143,14 @@ h1 {
 }
 
 
-/*///////////////////////// forretter //////////////////////////*/
+/*///////////////////////// retter //////////////////////////*/
 
-#forretter img {
+img {
     filter: brightness(60%);
     width: 100%;
 }
 
-#forretter img:hover {
+img:hover {
     filter: brightness(100%);
 }
 
@@ -176,6 +176,7 @@ h1 {
 
 .knap_i_midten {
     text-align: center;
+    min-height: 437px;
 }
 
 button {
