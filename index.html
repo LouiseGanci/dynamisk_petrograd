@@ -26,12 +26,12 @@
             </div>
             <div id="navbar" class="collapse navbar-collapse">
                 <ul class="nav navbar-nav">
-                    <li><a href="#forretter">Forretter</a></li>
-                    <li><a href="#hovedretter">Hovedretter</a></li>
-                    <li><a href="#desserter">Desserter</a></li>
-                    <li><a href="#sideorders">Sideorders</a></li>
-                    <li><a href="#drikkevarer">Drikkevarer</a></li>
-                    <li><a href="#findos">Find os</a></li>
+                    <li><a href="#forretter" class="slide">Forretter</a></li>
+                    <li><a href="#hovedretter" class="slide">Hovedretter</a></li>
+                    <li><a href="#desserter" class="slide">Desserter</a></li>
+                    <li><a href="#sideorders" class="slide">Sideorders</a></li>
+                    <li><a href="#drikkevarer" class="slide">Drikkevarer</a></li>
+                    <li><a href="#findos" class="slide">Find os</a></li>
 
                 </ul>
             </div>
@@ -63,12 +63,12 @@
 
                         <!----- Forretter ------->
                         <template id="produkt_template">
-                            <div class="knap_i_midten  col-md-2">
+                            <div class="knap_i_midten  col-md-4">
                                 <img class="data_billede" src="small/caviarbruschetta-sm.jpg" alt="Billede af caviar bruschetta">
                                 <h3 class="data_navn">DATA_NAVN</h3>
                                 <h4 class="pris">Pris: <span class="data_pris">DATA_PRIS</span>,-</h4>
                                 <!--- TODO: sæt udsolgt class ved udsolgt og sæt rabat class ved rabat -->
-                                <h4 class="rabatpris">Pris: <span class="data_rabatpris">DATA_RABATPRIS</span>,-</h4>
+                                <h4 class="rabatpris">Tilbudspris: <span class="data_rabatpris">DATA_RABATPRIS</span>,-</h4>
                                 <!--- skal kun vises ved rabat --->
                                 <h4 class="udsolgttekst">Denne ret er desværre udsolgt</h4>
                                 <!---- Skal kun vises ved udsolgt ---->

@@ -9,7 +9,7 @@
 }
 
 body {
-    background-color: #e8e4e2;
+    background-color: #f5f2f0;
 }
 
 p {
@@ -148,7 +148,7 @@ h1 {
 
 .background {
     width: 100vw;
-    max-width: 1600px;
+    max-width: 1100px;
     background-color: #f5f2f0;
     margin: 0 auto;
     padding-bottom: 20px;
@@ -160,6 +160,7 @@ h1 {
 img {
     filter: brightness(60%);
     width: 100%;
+    max-height: 230.50px;
 }
 
 img:hover {
@@ -180,10 +181,11 @@ img:hover {
 .knap_i_midten {
     text-align: center;
     min-height: 437px;
+    margin: 0;
 }
 
 button {
-    margin: 30px auto;
+    margin: 0 auto 20px;
     font-family: 'Hind';
 }
 

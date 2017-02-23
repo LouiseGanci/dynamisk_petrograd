@@ -1,5 +1,19 @@
 window.addEventListener("load", sidenVises);
 
+///////// Smooth scrolling when clicking on links /////////
+$('.slide').click(function (e) {
+
+    var linkhref = $(this).attr('href');
+    console.log(linkhref);
+
+    $('html, body').animate({
+        scrollTop: $(linkhref).offset().top
+    });
+
+    e.preventDefault();
+});
+//////////////////////////////////////////////////////////
+
 function sidenVises() {
     console.log("Siden vises");
 
@@ -13,16 +27,14 @@ function visProduktListe(listen) {
     listen.forEach(visProdukt);
 }
 
-var produktIndex = 0
 
 function visProdukt(produkt) {
     console.log(produkt);
 
     //klon produkt_template
     var klon = document.querySelector("#produkt_template").content.cloneNode(true);
-    if (produktIndex % 4 == 0) {
-        klon.querySelector(".knap_i_midten").classList.add("col-md-offset-2");
-    }
+
+
 
     //indsæt data i klon
     klon.querySelector(".data_navn").innerHTML = produkt.navn;
@@ -32,6 +44,7 @@ function visProdukt(produkt) {
     klon.querySelector(".data_rabatpris").innerHTML = rabatpris;
 
     klon.querySelector(".data_billede").src = "/small/" + produkt.billede + "-sm.jpg";
+
 
     if (produkt.udsolgt == false) {
         // produktet er ikke udsolgt
@@ -51,6 +64,10 @@ function visProdukt(produkt) {
     } else {
         klon.querySelector(".pris").classList.add("udsolgt");
     }
+    //
+    //    if (produkt.rabatsats != 0) {
+    //        document.querySelector(".data_pris").innerHTML = "";
+    //    }
 
     // tilføj produkt-id til modalknap
     klon.querySelector(".modalknap").dataset.produkt = produkt.id;
